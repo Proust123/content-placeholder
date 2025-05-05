@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Placeholder</title>
+
+    <style>
+
+        *{
+            margin : 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main{
+            height : 100vh;
+            width : 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            max-width: 100%;
+        }
+        .card{
+            width : 350px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px 1px black;
+            overflow: hidden;
+        }
+
+        .main_image{
+            height : 200px;
+            /* width: 800px; */
+            /* background-color: antiquewhite; */
+        }
+
+        .content{
+            /* background-color: darkcyan; */
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        .title{
+            height : 20px;
+            /* background-color: aqua; */
+            margin-top: 20px;
+        }
+
+        .excerpt{
+            /* background-color: darkgrey; */
+            height : 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .author{
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .author_image{
+            height : 40px;
+            width : 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            /* background-color: black; */
+        }
+
+        .author_info{
+            width : 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 20px;
+            /* background-color: burlywood; */
+        }
+        /* .name {
+             background-color: blue; 
+        /* }  */
+        .date{
+            /* background-color: brown; */
+            margin-top: 5px;
+        }
+
+        .animated_bg {
+            background-image: linear-gradient(
+                to right,
+                /* rgb(248, 249, 252) 0%,
+                rgb(234, 235, 238) 10%,
+                rgb(248, 249, 252) 20%,
+                rgb(248, 249, 252) 100% */
+                red 0%,
+                green 10%,
+                blue 30%,
+                purple 100%
+            );
+            background-size: 200% 100%;
+            /* background-position: 1% ; */
+            animation-name: bg;
+            animation-duration: 2.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes bg {
+            0%{
+                /*50% background position ka matlab hai k 200% size mein uss ki position jo blue color milta hai aur red & green
+                peechay reh jaty hain pr jb animation chalti hai tou wo samne aatay hai hai--aur ye effect aisay lgta hai
+                jaisy backword movement hai colors ki --- ye 50% sy peechay -200% tk jata hai aur phr wahan sy -150% tk */
+                background-position: 50% ; 
+            }
+            100%{
+                background-position: -150% ;
+            }
+        }
+        .animated_text{
+            border-radius: 50px;
+            height : 10px;
+            width : 100%;
+            display: inline-block;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section class = "main">
+
+        <div class = "card">
+            
+            <div class = "main_image animated_bg"></div>
+
+            <div class = "content">
+                <h3 class = "title animated_bg animated_text"></h3>
+
+                <p class = "excerpt">
+                    <span class = "animated_bg animated_text"></span>
+                    <span class = "animated_bg animated_text"></span>
+                    <span class = "animated_bg animated_text"></span>
+                </p>
+
+                <div class = "author">
+                    <div class = "author_image animated_bg"></div>
+                    <div class = "author_info">
+                        <strong class = "name animated_bg animated_text"></strong>
+                        <small class = "date animated_bg animated_text"></small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- <script src="./myContent.js"></script> -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
